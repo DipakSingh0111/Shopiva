@@ -1,11 +1,15 @@
 import React from "react";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Navbar from "./pages/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Layout from "./components/Layout";
 import ProductsDetails from "./components/ProductsDetails";
+import Mens from "./pages/Mens";
+import Womens from "./pages/Womens";
+import LatestCollections from "./pages/LatestCollections";
+import Kids from "./pages/kids";
+import SearchPage from "./components/SearchPage";
 
 const App = () => {
   return (
@@ -16,6 +20,11 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/product/:id/:slug" element={<ProductsDetails />} />
+          <Route path="mens" element={<Mens/>}/>
+          <Route path="womens" element={<Womens/>}/>
+          <Route path="latest" element={<LatestCollections/>}/>
+          <Route path="kids" element={<Kids/>}/>
+          <Route path="/search/:query" element={<SearchPage />} />
         </Route>
       </Routes>
     </>
