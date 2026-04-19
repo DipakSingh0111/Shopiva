@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { API_MAP } from "../utils/apiData";
-import ProductList from "../pages/ProductList";
+import ProductList from "./ProductList";
+
 
 const SearchPage = () => {
   const { query } = useParams();

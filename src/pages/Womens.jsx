@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { API_MAP } from '../utils/apiData';
-import ProductList from './ProductList';
+import ProductList from '../components/ProductList';
 import Loading from '../components/Loading';
 
 const Womens = () => {

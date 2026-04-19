@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import ProductList from "./ProductList";
+import ProductList from "../components/ProductList";
 import { API_MAP } from "../utils/apiData";
 import Loading from "../components/Loading";
 

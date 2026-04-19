@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import ProductList from "../pages/ProductList";
+import ProductList from "./ProductList";
 import { API_MAP } from "../utils/apiData";
 import axios from "axios";
 import { useDispatch } from "react-redux";

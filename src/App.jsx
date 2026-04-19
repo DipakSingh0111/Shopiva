@@ -9,12 +9,12 @@ import Mens from "./pages/Mens";
 import Womens from "./pages/Womens";
 import LatestCollections from "./pages/LatestCollections";
 import Kids from "./pages/kids";
-import SearchPage from "./components/SearchPage";
 import Cart from "./pages/Cart";
-import PlaceOrder from "./components/PlaceOrder";
+import PlaceOrder from "./pages/PlaceOrder";
 import { Toaster } from "react-hot-toast";
 import ProtectedRoute from "./components/ProtectedRoute";
 import UserProfile from "./components/UserProfile";
+import MyOrders from "./components/checkout/MyOrder";
 
 const App = () => {
   return (
@@ -29,10 +29,10 @@ const App = () => {
           <Route path="womens" element={<Womens />} />
           <Route path="latest" element={<LatestCollections />} />
           <Route path="kids" element={<Kids />} />
-          <Route path="/search/:query" element={<SearchPage />} />
           <Route path="/profile" element={<UserProfile />} />
+          <Route path="/my-orders" element={<MyOrders/>}/>
 
-          {/* 🔒 Protected */}
+          {/* 🔒 Protected  */}
           <Route
             path="/cart"
             element={
