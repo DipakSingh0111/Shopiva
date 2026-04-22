@@ -13,7 +13,7 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
 
   const [showPassword, setShowPassword] = useState(false);
-  const [loading, setLoading] = useState(false); // ✅ loading add kiya
+  const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 

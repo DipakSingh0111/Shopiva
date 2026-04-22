@@ -12,10 +12,9 @@ const RelatedProducts = ({ category, currentId }) => {
         `${API_MAP.category}/${encodeURIComponent(category)}`,
       );
 
-      // ✅ axios data access fix
       const products = response.data.products;
 
-      // ❌ current product remove
+      // current product remove
       const filtered = products.filter((item) => item.id !== currentId);
 
       setRelated(filtered.slice(0, 8)); // max 8 products

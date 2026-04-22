@@ -8,7 +8,6 @@ const ProtectedRoute = ({ children }) => {
   const user = localStorage.getItem("user");
 
   if (!user) {
-    // login nahi hai → login page + redirect back
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 

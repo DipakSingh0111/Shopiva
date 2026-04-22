@@ -16,8 +16,6 @@ const Register = () => {
     email: "",
     password: "",
     mobile: "",
-    // ✅ Role yahan nahi hai — backend hardcode karta hai "user"
-    // Admin sirf /admin/create route se banega (protected)
   });
 
   const handleChange = (e) => {
@@ -37,18 +35,10 @@ const Register = () => {
       const res = await axios.post(`${API_MAP.auth}/api/auth/signup`, form, {
         withCredentials: true,
       });
+      setForm(res.data);
 
-      // ✅ Backend se role aata hai response mein
-      const role = res.data.user?.role;
-
-      toast.success("Account created 🎉");
-
-      // ✅ ROLE-BASED REDIRECT
-      if (role === "admin") {
-        navigate("/admin/dashboard");
-      } else {
-        navigate("/"); // Shopping page
-      }
+      toast.success("Account created...");
+      navigate("/login");
     } catch (error) {
       toast.error(error.response?.data?.message || "Registration failed");
     } finally {

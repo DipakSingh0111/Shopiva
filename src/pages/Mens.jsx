@@ -21,30 +21,30 @@ const Mens = () => {
     }
   };
 
-  loading && <h1 className="text-center mt-10"><Loading/></h1>;
+  loading && (
+    <h1 className="text-center mt-10">
+      <Loading />
+    </h1>
+  );
 
   useEffect(() => {
     getMensProducts();
   }, []);
 
   return (
-  <div className="max-w-7xl mx-auto px-6 py-10 mt-16">
-    <h1 className="text-3xl font-bold text-center mb-8">
-      Mens Collection
-    </h1>
-
-    {/* 👇 yaha fix */}
-    {loading ? (
-      <Loading />
-    ) : (
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        {mens.map((item) => (
-          <ProductList key={item.id} data={item} />
-        ))}
-      </div>
-    )}
-  </div>
-);
+    <div className="max-w-7xl mx-auto px-6 py-10 mt-16">
+      <h1 className="text-3xl font-bold text-center mb-8">Mens Collection</h1>
+      {loading ? (
+        <Loading />
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {mens.map((item) => (
+            <ProductList key={item.id} data={item} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Mens;

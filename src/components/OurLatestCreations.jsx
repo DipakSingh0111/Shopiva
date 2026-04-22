@@ -8,11 +8,10 @@ const OurLatestCreations = () => {
 
   const getProducts = async () => {
     try {
-      // 🔥 random skip for changing data
       const random = Math.floor(Math.random() * 50);
 
       const res = await axios.get(
-        `https://dummyjson.com/products?limit=8&skip=${random}`
+        `https://dummyjson.com/products?limit=8&skip=${random}`,
       );
 
       setProducts(res.data.products);
@@ -40,7 +39,8 @@ const OurLatestCreations = () => {
       </h1>
 
       <p className="text-sm text-slate-500 text-center mt-2 max-w-lg mx-auto">
-        Discover our newest arrivals – fresh styles, trending picks, and best deals.
+        Discover our newest arrivals – fresh styles, trending picks, and best
+        deals.
       </p>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-10 max-w-6xl mx-auto px-3">
@@ -62,9 +62,7 @@ const OurLatestCreations = () => {
                 {item.title}
               </h2>
 
-              <p className="text-green-400 font-bold mt-1">
-                ₹{item.price}
-              </p>
+              <p className="text-green-400 font-bold mt-1">₹{item.price}</p>
 
               <button
                 onClick={(e) => {

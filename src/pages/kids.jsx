@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import ProductList from "../components/ProductList"
+import ProductList from "../components/ProductList";
 import { API_MAP } from "../utils/apiData";
 import Loading from "../components/Loading";
 
@@ -26,13 +26,10 @@ const Kids = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-10 mt-16">
-      
       {/* Heading */}
-      <h1 className="text-3xl font-bold text-center mb-6">
-        Kids Collection
-      </h1>
+      <h1 className="text-3xl font-bold text-center mb-6">Kids Collection</h1>
 
-      {/* 👇 Loading Spinner */}
+      {/* Loading Spinner */}
       {loading ? (
         <Loading />
       ) : (

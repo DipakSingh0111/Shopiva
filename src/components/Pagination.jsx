@@ -1,26 +1,12 @@
 import React from "react";
 
-/**
- * Pagination Component
- *
- * Props:
- *  - currentPage   {number}   - active page (1-indexed)
- *  - totalPages    {number}   - total number of pages
- *  - totalItems    {number}   - total product count (for label)
- *  - perPage       {number}   - items per page (for label)
- *  - onPageChange  {function} - called with new page number
- *
- * Usage:
- *  <Pagination
- *    currentPage={page}
- *    totalPages={Math.ceil(products.length / perPage)}
- *    totalItems={products.length}
- *    perPage={perPage}
- *    onPageChange={(p) => setPage(p)}
- *  />
- */
-
-const Pagination = ({ currentPage, totalPages, totalItems, perPage, onPageChange }) => {
+const Pagination = ({
+  currentPage,
+  totalPages,
+  totalItems,
+  perPage,
+  onPageChange,
+}) => {
   if (totalPages <= 1) return null;
 
   const from = (currentPage - 1) * perPage + 1;
@@ -60,8 +46,17 @@ const Pagination = ({ currentPage, totalPages, totalItems, perPage, onPageChange
           disabled={currentPage === 1}
           aria-label="Previous page"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4">
-            <path fillRule="evenodd" d="M9.78 4.22a.75.75 0 0 1 0 1.06L7.06 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L5.47 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0Z" clipRule="evenodd" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            className="w-4 h-4"
+          >
+            <path
+              fillRule="evenodd"
+              d="M9.78 4.22a.75.75 0 0 1 0 1.06L7.06 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L5.47 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0Z"
+              clipRule="evenodd"
+            />
           </svg>
         </button>
 
@@ -84,7 +79,7 @@ const Pagination = ({ currentPage, totalPages, totalItems, perPage, onPageChange
             >
               {page}
             </button>
-          )
+          ),
         )}
 
         {/* Next */}
@@ -94,8 +89,17 @@ const Pagination = ({ currentPage, totalPages, totalItems, perPage, onPageChange
           disabled={currentPage === totalPages}
           aria-label="Next page"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4">
-            <path fillRule="evenodd" d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06L7.28 11.78a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            className="w-4 h-4"
+          >
+            <path
+              fillRule="evenodd"
+              d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06L7.28 11.78a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z"
+              clipRule="evenodd"
+            />
           </svg>
         </button>
       </div>
@@ -103,9 +107,10 @@ const Pagination = ({ currentPage, totalPages, totalItems, perPage, onPageChange
       {/* Info label */}
       <p className="text-xs text-gray-400">
         Showing{" "}
-        <span className="text-gray-600 font-medium">{from}–{to}</span>{" "}
-        of{" "}
-        <span className="text-gray-600 font-medium">{totalItems}</span>{" "}
+        <span className="text-gray-600 font-medium">
+          {from}–{to}
+        </span>{" "}
+        of <span className="text-gray-600 font-medium">{totalItems}</span>{" "}
         products
       </p>
     </div>

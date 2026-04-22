@@ -9,7 +9,7 @@ const Products = () => {
   const [product, setProduct] = useState([]);
   const [page, setPage] = useState(1);
   const perPage = 8;
-  const gridRef = useRef(null); // 👈 ref banao
+  const gridRef = useRef(null);
 
   const handleProducts = async () => {
     const response = await axios.get(`${API_MAP.home}`);
@@ -29,7 +29,6 @@ const Products = () => {
       </h1>
 
       <div className="max-w-[1320px] mx-auto mt-5">
-        {/* 👇 ref yahan lagao */}
         <div
           ref={gridRef}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5"
@@ -46,8 +45,10 @@ const Products = () => {
           perPage={perPage}
           onPageChange={(p) => {
             setPage(p);
-            // 👇 grid ke upar smoothly scroll karega, pure page top pe nahi
-            gridRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+            gridRef.current?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
           }}
         />
       </div>
