@@ -6,7 +6,7 @@ import OrderSummary from "../components/checkout/OrderSummary";
 import DeliveryStep from "../components/checkout/DeliveryStep";
 import PaymentStep from "../components/checkout/PaymentStep";
 import ConfirmStep from "../components/checkout/ConfirmStep";
-import {toast} from 'react-hot-toast'
+import { toast } from "react-hot-toast";
 
 const PlaceOrder = () => {
   const navigate = useNavigate();
@@ -60,7 +60,7 @@ const PlaceOrder = () => {
   const handleBack = (toStep) => setStep(toStep);
 
   const handlePlaceOrder = () => {
-   toast.success("🎉 Order placed successfully!");
+    toast.success("🎉 Order placed successfully!");
     navigate("/");
   };
 

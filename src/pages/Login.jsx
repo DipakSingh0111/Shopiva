@@ -46,7 +46,6 @@ const Login = () => {
       toast.success("Login Successfully 🚀");
 
       // ROLE BASED REDIRECT
-      // Admin → Dashboard, User → jahan se aaya tha ya home
       if (user.role === "admin") {
         navigate("/admin", { replace: true });
       } else {
@@ -56,9 +55,9 @@ const Login = () => {
       // Specific error messages
       const status = error.response?.status;
       if (status === 400) {
-        toast.error("Email ya password galat hai");
+        toast.error("Invalid credentials");
       } else if (status === 404) {
-        toast.error("Account nahi mila — pehle register karo");
+        toast.error("User not found");
       } else {
         toast.error(error.response?.data?.message || "Login failed");
       }
