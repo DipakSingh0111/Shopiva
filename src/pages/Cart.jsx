@@ -46,11 +46,11 @@ const Cart = () => {
   }
 
   return (
-    <div className="bg-gray-50 min-h-screen py-6 sm:py-10 mt-10">
+    <div className="bg-gray-50 min-h-screen py-6 sm:py-10">
       <div className="max-w-6xl mx-auto px-3 sm:px-5 md:px-6">
         {/* HEADER */}
-        <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-3 mb-6">
-          <div>
+        <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-3 mb-6 mt-10">
+          <div className="flex flex-col mt-10">
             <h1 className="text-2xl sm:text-3xl font-bold">Shopping Cart</h1>
             <p className="text-gray-500 text-sm">
               {totalQty} item{totalQty !== 1 ? "s" : ""}
