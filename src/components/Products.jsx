@@ -33,11 +33,11 @@ const Products = () => {
           ref={gridRef}
           className="
         grid 
-        grid-cols-2 
+        grid-cols-1
         sm:grid-cols-2 
         md:grid-cols-3 
         lg:grid-cols-4 
-        xl:grid-cols-5 
+        xl:grid-cols-4
         gap-4 sm:gap-5 md:gap-6
       "
         >

@@ -1,5 +1,5 @@
 export const API_MAP = {
-  home: "https://dummyjson.com/products?limit=100",
+  home: "https://dummyjson.com/products",
   latest: "https://dummyjson.com/products?skip=0&limit=10",
   women: "https://dummyjson.com/products/category/womens-dresses",
   men: "https://dummyjson.com/products/category/mens-shirts",

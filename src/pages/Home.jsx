@@ -7,10 +7,10 @@ import OurLatestCreations from "../components/OurLatestCreations";
 const Home = () => {
   return (
     <div>
-      <Carousel/>
-      <Products/>
-      <Newsletter/>
-      <OurLatestCreations/>
+      <Carousel />
+      <Products />
+      <Newsletter />
+      <OurLatestCreations />
     </div>
   );
 };
